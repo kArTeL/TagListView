@@ -180,7 +180,7 @@ open class TagView: UIButton {
     override open var intrinsicContentSize: CGSize {
         var size = titleLabel?.text?.size(attributes: [NSFontAttributeName: textFont]) ?? CGSize.zero
         size.height = textFont.pointSize + paddingY * 2
-        size.width += paddingX * 2
+        size.width += paddingX * 2 + self.titleEdgeInsets.left
         if enableRemoveButton {
             size.width += removeButtonIconSize + paddingX
         }

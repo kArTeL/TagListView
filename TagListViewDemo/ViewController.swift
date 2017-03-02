@@ -44,7 +44,17 @@ class ViewController: UIViewController, TagListViewDelegate {
         biggerTagListView.shadowOffset = CGSize(width: 1, height: 1)
         biggerTagListView.addTag("Inboard")
         biggerTagListView.addTag("Pomotodo")
-        biggerTagListView.addTag("Halo Word")
+        let tagView1 = biggerTagListView.addTag("Halo Word")
+        
+        //let tagView = tagsListView.addTag(tag)
+        let tagImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: tagView.bounds.size.height) )
+        tagImage.image = UIImage(named: "ictapp_login")
+        tagView1.titleEdgeInsets = UIEdgeInsetsMake(0, 41, 0, 30)
+        tagView1.addSubview(tagImage)
+        tagView1.setupView()
+        
+        
+        
         biggerTagListView.alignment = .center
         
         biggestTagListView.delegate = self
@@ -52,6 +62,8 @@ class ViewController: UIViewController, TagListViewDelegate {
         // it is also possible to add all tags in one go
         biggestTagListView.addTags(["all", "your", "tag", "are", "belong", "to", "us"])
         biggestTagListView.alignment = .right
+        
+        
         
     }
     
