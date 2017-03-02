@@ -162,7 +162,7 @@ open class TagView: UIButton {
         setupView()
     }
     
-    private func setupView() {
+    open func setupView() {
         frame.size = intrinsicContentSize
         addSubview(removeButton)
         removeButton.tagView = self
